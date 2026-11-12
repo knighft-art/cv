@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Personal academic CV. Static assets only: no Worker script, bindings, secrets, or telemetry.
+  "name": "hanyupyum-founder",
+  "account_id": "79d7cf46b89760beee89f9045dc1dbd9",
+  "compatibility_date": "2026-11-12",
+  "workers_dev": true,
+  "observability": {
+    "enabled": false,
+    "logs": {
+      "enabled": false
+    },
+    "traces": {
+      "enabled": false
+    }
+  },
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
