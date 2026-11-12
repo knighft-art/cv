@@ -1,0 +1,168 @@
+:root {
+  color-scheme: light;
+  --paper: #fbfaf7;
+  --desk: #e6e1d8;
+  --ink: #1c1917;
+  --muted: #44403c;
+  --line: #d6d3d1;
+  --navy: #1e3a5f;
+  --navy-ink: #f8fafc;
+  --focus: #9a3412;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--desk);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--desk);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  width: min(960px, calc(100% - 2rem));
+  margin: 1.5rem auto 2rem;
+  padding: 1.75rem 1.25rem 1.25rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+h1,
+.subtitle {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.subtitle {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.updated,
+.note,
+footer {
+  color: var(--muted);
+}
+
+.updated {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.6rem 1.15rem;
+  border: 1px solid var(--navy);
+  border-radius: 4px;
+  color: var(--navy);
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button-solid {
+  color: var(--navy-ink);
+  background: var(--navy);
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.note {
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+}
+
+.viewer {
+  display: none;
+}
+
+footer {
+  margin-top: 1.5rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.875rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin-top: 2.5rem;
+    padding: 2.25rem 2rem 1.5rem;
+  }
+
+  .actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .note {
+    display: none;
+  }
+
+  .viewer {
+    display: block;
+    height: min(82vh, 1100px);
+    margin-top: 1.5rem;
+    background: #fff;
+    border: 1px solid var(--line);
+  }
+
+  .viewer iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+.wrangler/
+dist/
+.devtools/
+.dev.vars
+.env
+.env.*
+*.log
+.DS_Store
+npm-debug.log*
+.vercel
+.pages
