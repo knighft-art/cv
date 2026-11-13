@@ -11,7 +11,7 @@ The PDF is the source of truth. The landing page shows high-resolution images of
 | URL | File | How it is served |
 | --- | --- | --- |
 | `/` | `public/index.html` | Four stacked page images of the official CV, plus a small Download PDF link |
-| `/pages/cv-page-N.webp` and `/pages/cv-page-N@2x.webp` | `public/pages/` | Page images rendered from the official PDF at 110 DPI and 220 DPI |
+| `/pages/cv-page-N.webp` and `/pages/cv-page-N-2x.webp` | `public/pages/` | Page images rendered from the official PDF at 110 DPI and 220 DPI |
 | `/cv.pdf` | `public/cv.pdf` | `application/pdf`, inline |
 | `/Han-Yup_Yum_Ph.D._CV.pdf` | `public/Han-Yup_Yum_Ph.D._CV.pdf` | `application/pdf`, download |
 
