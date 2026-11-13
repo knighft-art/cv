@@ -4,13 +4,13 @@ Personal academic curriculum vitae site for Han-Yup Yum, Ph.D. This is not a Cha
 
 **Live site:** https://hanyupyum-founder.chamomilegrey.workers.dev
 
-The PDF is the source of truth. The landing page shows high-resolution images of that official PDF, in the same layout, so the CV is visible immediately. Do not retypeset, rewrite, or replace the PDF with HTML body text.
+The PDF is the source of truth. The landing page keeps a heading with View and Download, then shows high-resolution images of that official PDF in the same layout. Do not retypeset, rewrite, or replace the PDF with HTML body text.
 
 ## What is published
 
 | URL | File | How it is served |
 | --- | --- | --- |
-| `/` | `public/index.html` | Four stacked page images of the official CV, plus a small Download PDF link |
+| `/` | `public/index.html` | Heading, View, and Download, then four stacked page images of the official CV |
 | `/pages/cv-page-N.webp` and `/pages/cv-page-N-2x.webp` | `public/pages/` | Page images rendered from the official PDF at 110 DPI and 220 DPI |
 | `/cv.pdf` | `public/cv.pdf` | `application/pdf`, inline |
 | `/Han-Yup_Yum_Ph.D._CV.pdf` | `public/Han-Yup_Yum_Ph.D._CV.pdf` | `application/pdf`, download |
